@@ -54,6 +54,7 @@ trait BackendCompilationUtilities extends FirrtlBackendCompilationUtilities {
 /**
   * This family provides return values from the chisel3 and possibly firrtl compile steps
   */
+@deprecated("This will be removed in Chisel 3.5", "Chisel3 3.4")
 trait ChiselExecutionResult
 
 /**
@@ -62,6 +63,7 @@ trait ChiselExecutionResult
   * @param emitted            The emitted Chirrrl text
   * @param firrtlResultOption Optional Firrtl result, @see freechipsproject/firrtl for details
   */
+@deprecated("This will be removed in Chisel 3.5", "Chisel 3.4")
 case class ChiselExecutionSuccess(
                                   circuitOption: Option[Circuit],
                                   emitted: String,
@@ -73,4 +75,5 @@ case class ChiselExecutionSuccess(
   *
   * @param message A clue might be provided here.
   */
+@deprecated("This will be removed in Chisel 3.5", "Chisel 3.4")
 case class ChiselExecutionFailure(message: String) extends ChiselExecutionResult

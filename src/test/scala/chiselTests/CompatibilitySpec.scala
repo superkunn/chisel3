@@ -408,25 +408,6 @@ class CompatibiltySpec extends ChiselFlatSpec with ScalaCheckDrivenPropertyCheck
     elaborate(new Foo)
   }
 
-  behavior of "LFSR16"
-
-  it should "still exist" in {
-    class Foo extends Module {
-      val io = IO(new Bundle{})
-
-      info("Still exists")
-      val lfsr = LFSR16()
-
-      info("apply method returns a UInt")
-      lfsr shouldBe a [UInt]
-
-      info("returned UInt has a width of 16")
-      lfsr.getWidth should be (16)
-    }
-
-    elaborate(new Foo)
-  }
-
   behavior of "Mem"
 
   it should "support deprecated apply methods" in {

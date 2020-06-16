@@ -561,8 +561,6 @@ package object Chisel {     // scalastyle:ignore package.object.name number.of.t
     }
   }
 
-  val LFSR16 = chisel3.util.LFSR16
-
   val ListLookup = chisel3.util.ListLookup
   val Lookup = chisel3.util.Lookup
 
